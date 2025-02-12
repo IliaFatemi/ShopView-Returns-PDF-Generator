@@ -47,7 +47,7 @@ function generatePDF() {
   });
 
   // Calculate total cost with 12% tax
-  const taxRate = 0.12;
+  const taxRate = apiData.data.items[0].workplace_tax / 100;
   const totalWithTax = totalCost * (1 + taxRate);
 
   // Add the final row for total cost
